@@ -1,0 +1,16 @@
+<app-root [value]="1"></app-root>
+<form (ngSubmit)="login()" class="was-validated">
+    
+    <label >User Name : </label>
+    <input type="text" class="form-control" name="username" [(ngModel)]="username"  required>
+    <br>
+    <label >Password : </label>
+    <input type="password" class="form-control" name="password" [(ngModel)]="password"  required>
+    <br>
+    <label >Role : </label>
+    User : <input type="radio" name="role" value="user" [(ngModel)]="role">
+    Admin : <input type="radio" name="role" value="admin" [(ngModel)]="role">
+    <br>
+    <br>
+    <button type="submit" class="btn btn-primary">Login</button>
+    </form>

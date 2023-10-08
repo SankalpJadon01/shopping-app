@@ -1,0 +1,19 @@
+<app-root [value]="1"></app-root>
+<form (ngSubmit)="save()" class="was-validated">
+    <label >Username : </label>
+<input class="form-control" name="custid" [(ngModel)]="c.custid" required >
+<br>
+<label >Name : </label>
+<input type="text" class="form-control" name="name" [(ngModel)]="c.name" required >
+<br>
+<label >Password : </label>
+<input type="password"  class="form-control" name="password" [(ngModel)]="c.password" required>
+<br>
+<label >Mobile : </label>
+<input  class="form-control" name="mobile" [(ngModel)]="c.mobile" required>
+<br>
+<label >Email : </label>
+<input type="text"  class="form-control" name="email" [(ngModel)]="c.email" required>
+<br>
+<button type="submit" class="btn btn-primary">Save Customer</button>
+    </form>
