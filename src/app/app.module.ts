@@ -14,7 +14,7 @@ import { ProductlistComponent } from './productlist/productlist.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { ListbycategoryComponent } from './listbycategory/listbycategory.component';
 import { CartComponent } from './cart/cart.component';
-import { AddcustomerComponent } from './addcustomer/addcustomer.component';
+import { AddcustomerComponent } from './addproduct/addcustomer.component';
 import { CustomerlistComponent } from './customerlist/customerlist.component';
 import { ProductupdateComponent } from './productupdate/productupdate.component';
 

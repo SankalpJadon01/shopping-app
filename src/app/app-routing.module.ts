@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AddcustomerComponent } from './addcustomer/addcustomer.component';
+import { AddcustomerComponent } from './addproduct/addcustomer.component';
 import { AdmindashComponent } from './admindash/admindash.component';
 import { CartComponent } from './cart/cart.component';
 import { CustomerdashComponent } from './customerdash/customerdash.component';

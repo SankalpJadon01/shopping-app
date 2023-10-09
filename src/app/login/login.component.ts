@@ -11,25 +11,28 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   username : string = '';
   password : string = '';
-  role : string = '';
   c : Customer[]=[];
   constructor(private service: CustomerService, private router: Router){
     this.service.list().subscribe(data => this.c = data);
   }
   login(){
-    if(this.username=="sankalp101"&&this.password=="12345"&&this.role=="admin"){
+    if(this.username=="sankalp101"&&this.password=="12345"){
       sessionStorage.setItem("username","sankalp101");
-      sessionStorage.setItem("password","12345");
+      sessionStorage.setItem("navbar1", "true");
+      sessionStorage.setItem("navbar2","false");
+      // sessionStorage.setItem("password","12345");
       this.router.navigate(['/admindash']);
-      setTimeout(()=>{alert("Logged in as Admin")},1000);
+      setTimeout(()=>{alert("Welcome , Admin")},1000);
     }
-    else if (this.c.find(p=>p.password==this.password && p.custid==this.username)!=undefined && this.role=="user"){
+    else if (this.c.find(p=>p.password==this.password && p.custid==this.username)!=undefined){
      console.log(this.c);
       sessionStorage.setItem("username",this.username);
-      sessionStorage.setItem("password",this.password);
-      console.log(sessionStorage.getItem("username"));
+      sessionStorage.setItem("navbar2", "true");
+      sessionStorage.setItem("navbar1","false");
+      sessionStorage.setItem("username",this.username);
+      // sessionStorage.setItem("password",this.password);
       this.router.navigate(['/customerdash']);
-      setTimeout(()=>{alert("Logged in as User")},1000);
+      setTimeout(()=>{alert("Welcome, "+sessionStorage.getItem("username"))},1000);
   }
 else{
   this.router.navigate(['/login']);

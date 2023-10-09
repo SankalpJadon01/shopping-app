@@ -19,4 +19,8 @@ export class AppComponent {
 if(confirm("Are you sure you want to logout?"))
 this.router.navigate(['/login']);
   }
+
+  update(){
+    sessionStorage.setItem("update","false");
+  }
 }
